@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&family=Playwrite+VN:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Playwrite+NZ:wght@100..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Playwrite+NZ:wght@100..400&family=Signika:wght@300..700&display=swap" rel="stylesheet">
+<style>
+.r-container {
+    background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 0, 0));
+
+    background-color: #ffffff;
+    width: 500px;
+    height: 500px;
+    margin-top:100px;
+    margin-left: 250px ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
+    align-content: center;
+}
+
+.button{
+    background-color: #009df9;
+    color: #eeeef6;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+    
+}
+td{
+    padding: 12px;
+    font-family: Signika;
+}
+body{
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(255, 255, 255));
+    width:200px;
+    border:0px;
+    height:30px;
+    border-radius:10px;
+    margin-left:245px;
+}
+h1{
+    font-family: Signika;
+    font-style: bold 700px;
+}
+</style>
+<script>
+function val(event){
+    event.preventDefault();
+    var a=document.getElementById("fn").value;
+    var b=document.getElementById("un").value;
+    var c=document.getElementById("e").value;
+    var d=document.getElementById("pn").value;
+    var e=document.getElementById("pwd").value;
+    var f=document.getElementById("cpwd").value;
+    var gen=document.querySelector('input[name="drone"]:checked').value;
+
+    document.writeln(a);
+    document.writeln(b);
+    document.writeln(c);
+    document.writeln(d);
+    document.writeln(e);
+    document.writeln(f);
+    document.writeln(gen);
+
+}
+</script>
+</head>
+<body>
+    <div class="r-container">
+        <h1><b>Registration</b></h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Full Name:<br><br><input type="text" id="fn" name="Name" placeholder="Enter your name"></td>
+                    <td>UserName:<br><br><input type="text" id="un" name="Name" placeholder="Enter your UserName"></td>
+                </tr>
+                <tr>
+                    <td>Email:<br><br><input type="email" id="e" name="email" placeholder="Enter your email"></td>
+                    <td>Phone Number:<br><br><input type="tel" id="pn" name="Number" placeholder="Enter your Number"></td>
+                </tr>
+                <tr>
+                    <td>Password:<br><br><input type="password" id="pwd" name="password" placeholder="Enter your password"></td>
+                    <td>Confirm Password:<br><br><input type="password" id="cpwd" name="password" placeholder="re-enter your pwd"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <tr>
+                        <td>
+                            
+                              Gender:<br>
+                                
+                                 <input type="radio" id="m" name="drone" value="Male" checked />
+                                  <label for="Male">Male</label>
+                                  <input type="radio" id="f" name="drone" value="Female"/>
+                                  <label for="Female">Female</label>
+                                  <input type="radio" id="n" name="drone" value="Other"/>
+                                  <label for="prefer not to say">Not to say</label>
+                    </td>
+                </tr>
+            
+            </table>
+            <br>
+
+            <center><button class="button" onclick="val(event)">Register</button></center>
+            
+            
+        </form>
+        
+    </div>
+</body>
+</html>
